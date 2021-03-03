@@ -60,7 +60,7 @@ TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 29
+PRODUCT_SHIPPING_API_LEVEL := 30
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 30
@@ -72,7 +72,13 @@ PRODUCT_BUILD_PRODUCT_IMAGE := true
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService-Soong
+    AntHalService-Soong \
+    com.dsi.ant.antradio_library \
+    com.dsi.ant@1.0
+
+# Atrace
+PRODUCT_PACKAGES += \
+    android.hardware.atrace@1.0-service
 
 # Audio
 PRODUCT_PACKAGES += \
@@ -239,17 +245,7 @@ PRODUCT_COPY_FILES += \
 # Modules
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/modules,$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/lib/modules)
-<<<<<<< HEAD
-=======
 
-#miui ringtones
-PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/alarms,$(TARGET_COPY_OUT_SYSTEM)/media/audio/alarms) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ringtones,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ringtones) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/notifications,$(TARGET_COPY_OUT_SYSTEM)/media/audio/notifications) \
-    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/media/ui,$(TARGET_COPY_OUT_SYSTEM)/media/audio/ui)
-
-#manifests
+# Manifests
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/android.hardware.graphics.mapper-impl-qti-display.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/vintf/manifest/android.hardware.graphics.mapper-impl-qti-display.xml \
->>>>>>> 94ec405... tweak wifi power and stability
