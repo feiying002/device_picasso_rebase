@@ -47,8 +47,6 @@ ro.product.property_source_order=odm,vendor,product,system_ext,system
 #Battery Property
 ro.charger.enable_suspend = 1
 
-
-
 # Memory optimizations
 ro.vendor.qti.sys.fw.bservice_enable=true
 
@@ -112,6 +110,9 @@ debug.sf.enable_hwc_vds=1
 
 #property to latch unsignaled buffer
 debug.sf.latch_unsignaled=1
+
+# Perf
+ro.vendor.perf.scroll_opt=true
 
 # system props for the data modules
 #
