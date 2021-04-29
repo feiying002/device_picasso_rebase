@@ -128,3 +128,7 @@ ro.bluetooth.library_name=libbluetooth_qti.so
 persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
+
+# Vo5G
+persist.dbg.Vo5G_avail_ovr=1
+persist.dbg.video_on_5G=1
