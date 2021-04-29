@@ -21,7 +21,7 @@ $(call inherit-product, vendor/xiaomi/picasso/picasso-vendor.mk)
 # Inherit properties
 include $(LOCAL_PATH)/properties.mk
 include $(LOCAL_PATH)/system.prop
-include $(LOCAL_PATH)/product.prop  
+include $(LOCAL_PATH)/product.prop
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -39,8 +39,7 @@ PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay
 
 # Overlays -- Override vendor ones
 PRODUCT_PACKAGES += \
@@ -149,7 +148,7 @@ PRODUCT_COPY_FILES += \
 # HotwordEnrollement
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
-    
+
 # IFAA manager
 PRODUCT_PACKAGES += \
     org.ifaa.android.manager
@@ -167,7 +166,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/uinput-goodix.kl
-    
+
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
@@ -178,8 +177,8 @@ PRODUCT_PACKAGES += \
 # Overlay - notch style
 PRODUCT_PACKAGES += \
     NotchNoFillOverlay
-    
-    # Parts
+
+# Parts
 PRODUCT_PACKAGES += \
     XiaomiParts
 

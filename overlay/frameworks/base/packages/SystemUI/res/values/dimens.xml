@@ -28,4 +28,7 @@
     <dimen name="status_bar_padding_start">15dp</dimen>
     <dimen name="rounded_corner_content_padding">7.0dip</dimen>
 
+    <!-- The minimum bottom margin of the keyguard security container -->
+    <dimen name="kg_security_container_min_bottom_margin">846px</dimen>
+
 </resources>
