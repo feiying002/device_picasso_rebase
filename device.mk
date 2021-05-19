@@ -30,12 +30,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.aware.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.aware.xml \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/android.hardware.wifi.rtt.xml
 
-
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
-
-# APN
-#PRODUCT_COPY_FILES += \
-#    $(LOCAL_PATH)/configs/apns-conf.xml:system/etc/apns-conf.xml
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -121,7 +116,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     vendor.qti.hardware.display.composer@3.0
 
-    # Fastbootd
+# Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
 
@@ -155,7 +150,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     org.ifaa.android.manager
-
 
 # Input
 PRODUCT_COPY_FILES += \
