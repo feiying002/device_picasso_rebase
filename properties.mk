@@ -20,13 +20,18 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log
 
+# AOSP Dynamic Refresh Rate
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.surface_flinger.set_display_power_timer_ms=1000 \
+    ro.surface_flinger.set_idle_timer_ms=200 \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true
 
 # IMS
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.dbg.vt_avail_ovr=1 \
     persist.dbg.wfc_avail_ovr=1
-
 
 # Telephony
 PRODUCT_PRODUCT_PROPERTIES += \
@@ -35,7 +40,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Vendor
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.vendor.qti.va_aosp.support=1
-
 
 # Graphics
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
