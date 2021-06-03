@@ -659,4 +659,8 @@
     
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">false</bool>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">120</integer>
+
 </resources>
