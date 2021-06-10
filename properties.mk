@@ -1,9 +1,3 @@
-ifeq ($(TARGET_BUILD_VARIANT),eng)
-# ADB
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.adb.secure=0
-endif
-
 # Audio
 PRODUCT_PRODUCT_PROPERTIES += \
     audio.offload.min.duration.secs=30
